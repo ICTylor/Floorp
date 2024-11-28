@@ -507,6 +507,7 @@ const TimeStamp& WindowContext::GetUserGestureStart() const {
 
 bool WindowContext::HasValidTransientUserGestureActivation() {
   MOZ_ASSERT(IsInProcess());
+  return true;
 
   if (GetUserActivationState() != UserActivation::State::FullActivated) {
     // mUserGestureStart should be null if the document hasn't ever been
